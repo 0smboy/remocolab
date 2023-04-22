@@ -350,14 +350,9 @@ def _setup_nvidia_gl():
   subprocess.Popen(["Xorg", "-seat", "seat-1", "-allowMouseOpenFail", "-novtswitch", "-nolisten", "tcp"])
 
 def _setupVNC():
-  libjpeg_ver = "2.0.5"
-  virtualGL_ver = "2.6.4"
-  turboVNC_ver = "2.2.5"
-
-  libjpeg_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/libjpeg-turbo-official_{0}_amd64.deb".format(libjpeg_ver)
-  virtualGL_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/virtualgl_{0}_amd64.deb".format(virtualGL_ver)
-  turboVNC_url = "https://github.com/demotomohiro/turbovnc/releases/download/2.2.5/turbovnc_{0}_amd64.deb".format(turboVNC_ver)
-
+  libjpeg_url = "https://master.dl.sourceforge.net/project/libjpeg-turbo/2.0.5/libjpeg-turbo-official_2.0.5_amd64.deb?viasf=1"
+  virtualGL_url = "https://phoenixnap.dl.sourceforge.net/project/virtualgl/2.6.4/virtualgl_2.6.4_amd64.deb"
+  turboVNC_url = "https://cfhcable.dl.sourceforge.net/project/turbovnc/2.2.5/turbovnc_2.2.5_amd64.deb"
   _download(libjpeg_url, "libjpeg-turbo.deb")
   _download(virtualGL_url, "virtualgl.deb")
   _download(turboVNC_url, "turbovnc.deb")
